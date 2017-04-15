@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 类描述
+ * Redis存储测试类
  * <p>
  * 方法描述列表
  * </p>

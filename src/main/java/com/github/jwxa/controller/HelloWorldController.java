@@ -23,12 +23,6 @@ public class HelloWorldController {
     @Autowired
     private IStaffService staffService;
 
-    @ApiOperation(value="Hello World")
-    @RequestMapping(value = "/hello", method= RequestMethod.GET)
-    public String index() {
-        return "Hello World";
-    }
-
     @ApiOperation(value="通过用户名查询用户信息，JPA实现")
     @RequestMapping(value = "/getStaffJPA", method= RequestMethod.GET)
     @ApiImplicitParam(name = "id", value = "用户名", required = true, dataType = "String" )

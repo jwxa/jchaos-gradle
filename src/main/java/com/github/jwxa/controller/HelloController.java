@@ -68,4 +68,27 @@ public class HelloController {
         throw new MyException("发生错误json");
     }
 
+    /**
+     * 登录页面
+     * springboot-security
+     * http://blog.didispace.com/springbootsecurity/
+     * @return
+     */
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    /**
+     * 访问hello 被重定向到了 login
+     * 因为没有登录，用户没有访问权限，
+     * 通过输入用户名user和密码password进行登录后，跳转到了Hello World页面，
+     * 再也通过访问http://localhost:8080/login?logout，就可以完成注销操作。
+     * @return
+     */
+    @RequestMapping(value = "/hello", method= RequestMethod.GET)
+    public String hello() {
+        return "hello";
+    }
+
 }
