@@ -44,8 +44,6 @@ dependencies {
 			"org.springframework.boot:spring-boot-starter-thymeleaf:${spring_boot_version}",
 			//aop 切面
 			"org.springframework.boot:spring-boot-starter-aop:${spring_boot_version}",
-			//spring-security 安全验证框架
-			"org.springframework.boot:spring-boot-starter-security:${spring_boot_version}",
 			//cache 缓存
 			"org.springframework.boot:spring-boot-starter-cache:${spring_boot_version}",
 			//邮件接口
@@ -73,6 +71,13 @@ dependencies {
 //	compile group: 'ojdbc6', name: 'ojdbc6', version: '11.2.0.2.0'
 	//lombok
 	compile group: 'org.projectlombok', name: 'lombok'
+	//shiro apache 安全框架
+	compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.2.4'
+	compile group: 'org.apache.shiro', name: 'shiro-ehcache', version: '1.2.4'
+	compile group: 'org.apache.shiro', name: 'shiro-cas', version: '1.2.4'
+	//util
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+
 }
 
 
