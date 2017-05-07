@@ -15,7 +15,7 @@ import javax.jms.Queue;
  * User: Jwxa Date: 2017/4/16 ProjectName: jchaos-gradle Version: 1.0
  */
 @Component
-public class Producer {
+public class ActiveMqProducer {
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;
 

@@ -4,11 +4,11 @@ import com.github.jwxa.model.EoSymStaffDO;
 import com.github.jwxa.service.IStaffService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.websocket.server.PathParam;
 
 /**
  * 使用Swagger2构建RESTful API
@@ -43,6 +43,16 @@ public class HelloWorldController {
     public EoSymStaffDO getStaffMybatisAnnotation(@RequestParam("id") String id){
         return  staffService.findByIdMybatisAnnotation(id);
     }
+
+
+    @ApiOperation(value="获取用户详细信息", notes="根据url的id来获取用户详细信息")
+    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long" ,paramType = "path")
+    @RequestMapping(value="/users/{id}", method=RequestMethod.GET)
+    public String getUser(  @PathVariable Long id) {
+        return id+"";
+    }
+
+
 
 
 }

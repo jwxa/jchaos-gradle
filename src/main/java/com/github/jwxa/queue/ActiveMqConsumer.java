@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * User: Jwxa Date: 2017/4/16 ProjectName: jchaos-gradle Version: 1.0
  */
 @Component
-public class Consumer {
+public class ActiveMqConsumer {
 
     @JmsListener(destination = "sample.queue")
     public void receiveQueue(String text) {
